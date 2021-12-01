@@ -9,14 +9,14 @@ fun main() {
 }
 
 fun solveTask1(input: List<String>): Int =
-        input.map { value -> value.toInt() }
-                .solveIncreasingTimes()
+    input.map { value -> value.toInt() }
+        .solveIncreasingTimes()
 
 fun solveTask2(input: List<String>): Int = input.map { value -> value.toInt() }
-        .windowed(size = 3, step = 1, partialWindows = false) { list ->
-            list.sum()
-        }
-        .solveIncreasingTimes()
+    .windowed(size = 3, step = 1, partialWindows = false) { list ->
+        list.sum()
+    }
+    .solveIncreasingTimes()
 
 
 internal fun Iterable<Int>.solveIncreasingTimes(): Int = fold(Result()) { acc, value ->
@@ -28,6 +28,6 @@ internal fun Iterable<Int>.solveIncreasingTimes(): Int = fold(Result()) { acc, v
 }.counter
 
 data class Result(
-        val previousHighest: Int? = null,
-        val counter: Int = 0,
+    val previousHighest: Int? = null,
+    val counter: Int = 0,
 )
