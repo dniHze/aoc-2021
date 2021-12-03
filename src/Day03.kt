@@ -32,7 +32,6 @@ private fun List<String>.solveDay3Part1(): Int {
     return gamma * epsilon
 }
 
-
 private fun List<String>.solveDay3Part2(): Int {
     val testTree = toWeightedTree()
     val scrubberRating = testTree.findSmallestNode()
