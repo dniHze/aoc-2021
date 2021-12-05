@@ -26,9 +26,12 @@ private fun solveDay5Part2(input: List<String>): Int =
 private fun List<String>.toLineList() = map { string -> string.split(" -> ") }
     .map { (start, end) -> Line(start.toCoordinates(), end.toCoordinates()) }
 
-private fun List<Line>.filterStraightLines() = filter { (start, end) -> start.x == end.x || start.y == end.y }
+private fun List<Line>.filterStraightLines() =
+    filter { (start, end) -> start.x == end.x || start.y == end.y }
 
-private fun List<Line>.createLineMatrix() = fold(Coordinates(0, 0)) { acc, line -> max(acc, line.max()) }
+private fun List<Line>.createLineMatrix() = fold(
+    initial = Zero,
+) { acc, line -> max(acc, line.max()) }
     .let { (x, y) -> Array(y + 1) { Array(x + 1) { 0 } } }
     .also { matrix ->
         onEach { line ->
@@ -41,8 +44,8 @@ private fun List<Line>.createLineMatrix() = fold(Coordinates(0, 0)) { acc, line 
 private fun Array<Array<Int>>.sumAtLeast2LinesOverlap() =
     sumOf { row -> row.sumOf { amount -> if (amount > 1) 1L else 0L } }.toInt()
 
-
-private fun String.toCoordinates() = split(',').let { (x, y) -> Coordinates(x.toInt(), y.toInt()) }
+private fun String.toCoordinates() = split(',')
+    .let { (x, y) -> Coordinates(x.toInt(), y.toInt()) }
 
 private fun step(start: Int, end: Int) = when {
     start == end -> 0
@@ -50,9 +53,8 @@ private fun step(start: Int, end: Int) = when {
     else -> -1
 }
 
-
 private fun max(first: Coordinates, second: Coordinates) =
-    Coordinates(max(first.x, second.x), max(first.y, second.y))
+    Coordinates(x = max(first.x, second.x), y = max(first.y, second.y))
 
 
 private data class Line(
@@ -62,11 +64,18 @@ private data class Line(
 
 private data class Coordinates(val x: Int, val y: Int)
 
+private val Zero = Coordinates(x = 0, y = 0)
+
 private fun Line.onEachMember(block: (Coordinates) -> Unit) {
     val horizontalStep = step(start.x, end.x)
     val verticalStep = step(start.y, end.y)
     repeat(stepsCount()) { count ->
-        block(Coordinates(start.x + horizontalStep * count, start.y + verticalStep * count))
+        block(
+            Coordinates(
+                x = start.x + horizontalStep * count,
+                y = start.y + verticalStep * count
+            )
+        )
     }
 }
 
