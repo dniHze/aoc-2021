@@ -1,5 +1,7 @@
 # 🎄 🎅 ☃️ Advent of Code - 2021 ☃️ 🎅 🎄
 
+[![Test & Run](https://github.com/dniHze/aoc-2021/actions/workflows/gradle.yml/badge.svg)](https://github.com/dniHze/aoc-2021/actions/workflows/gradle.yml)
+
 Welcome to the Advent of Code[^aoc] Kotlin project created using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
 This year I'm solving in [Kotlin][kotlin] programming language.
