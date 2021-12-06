@@ -1,15 +1,28 @@
-# aoc-2021
+# 🎄 🎅 ☃️ Advent of Code - 2021 ☃️ 🎅 🎄
 
-Welcome to the Advent of Code[^aoc] Kotlin project created by [dnihze][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
+Welcome to the Advent of Code[^aoc] Kotlin project created using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
-In this repository, dnihze is about to provide solutions for the puzzles using [Kotlin][kotlin] language.
+This year I'm solving[Kotlin][kotlin] language.
 
-If you stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
+## Running & testing
+Running all day solutions from shell:
+```bash
+./gradlew run 
+```
+Testing also can be done by running test task for Gradle:
+```bash
+./gradlew test
+```
 
-- [Kotlin docs][docs]
-- [Kotlin Slack][slack]
-- Template [issue tracker][issues]
-
+## Solutions
+| Task | Solution |
+| - | - |
+| [Day 1](https://adventofcode.com/2021/day/1) | [`day01/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day01/Task.kt) |
+| [Day 2](https://adventofcode.com/2021/day/2) | [`day02/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day02/Task.kt) |
+| [Day 3](https://adventofcode.com/2021/day/3) | [`day03/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day03/Task.kt) |
+| [Day 4](https://adventofcode.com/2021/day/4) | [`day04/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day04/Task.kt) |
+| [Day 5](https://adventofcode.com/2021/day/5) | [`day05/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day05/Task.kt) |
+| [Day 6](https://adventofcode.com/2021/day/6) | [`day06/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day06/Task.kt) |
 
 [^aoc]:
     [Advent of Code][aoc] – an annual event in December since 2015.
@@ -17,9 +30,5 @@ If you stuck with Kotlin-specific questions or anything related to this template
     A set of Christmas-oriented challenges provide any input you have to use to answer using the language of your choice.
 
 [aoc]: https://adventofcode.com
-[docs]: https://kotlinlang.org/docs/home.html
-[github]: https://github.com/dnihze
-[issues]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template/issues
 [kotlin]: https://kotlinlang.org
-[slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
 [template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template
