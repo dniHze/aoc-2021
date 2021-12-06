@@ -17,12 +17,12 @@ Testing also can be done by running test task for Gradle:
 ## Solutions
 | Task | Solution |
 | - | - |
-| [Day 1](https://adventofcode.com/2021/day/1) | [`day01/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day01/Task.kt) |
-| [Day 2](https://adventofcode.com/2021/day/2) | [`day02/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day02/Task.kt) |
-| [Day 3](https://adventofcode.com/2021/day/3) | [`day03/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day03/Task.kt) |
-| [Day 4](https://adventofcode.com/2021/day/4) | [`day04/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day04/Task.kt) |
-| [Day 5](https://adventofcode.com/2021/day/5) | [`day05/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day05/Task.kt) |
-| [Day 6](https://adventofcode.com/2021/day/6) | [`day06/Task.kt`](https://github.com/dniHze/aoc-2021/blob/3f0301f8c5a1d22cba023787b44de283cc50774f/src/day06/Task.kt) |
+| [Day 1](https://adventofcode.com/2021/day/1) | [`day01/Task.kt`](src/day01/Task.kt) |
+| [Day 2](https://adventofcode.com/2021/day/2) | [`day02/Task.kt`](src/day02/Task.kt) |
+| [Day 3](https://adventofcode.com/2021/day/3) | [`day03/Task.kt`](src/day03/Task.kt) |
+| [Day 4](https://adventofcode.com/2021/day/4) | [`day04/Task.kt`](src/day04/Task.kt) |
+| [Day 5](https://adventofcode.com/2021/day/5) | [`day05/Task.kt`](src/day05/Task.kt) |
+| [Day 6](https://adventofcode.com/2021/day/6) | [`day06/Task.kt`](src/day06/Task.kt) |
 
 [^aoc]:
     [Advent of Code][aoc] – an annual event in December since 2015.
