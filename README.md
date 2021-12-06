@@ -2,7 +2,7 @@
 
 Welcome to the Advent of Code[^aoc] Kotlin project created using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
-This year I'm solving[Kotlin][kotlin] language.
+This year I'm solving in [Kotlin][kotlin] programming language.
 
 ## Running & testing
 Running all day solutions from shell:
