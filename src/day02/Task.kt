@@ -1,14 +1,18 @@
-fun main() {
-    val testInput = readInput("Day02_test")
-    check(testInput.solveDay2(aim = false) == 150)
-    check(testInput.solveDay2(aim = true) == 900)
+package day02
 
-    val input = readInput("Day02")
-    println(input.solveDay2(aim = false))
-    println(input.solveDay2(aim = true))
+import readInput
+
+fun main() {
+    val input = readInput("day02")
+    println(solvePartOne(input))
+    println(solvePartTwo(input))
 }
 
-private fun List<String>.solveDay2(aim: Boolean): Int = toCommandList()
+fun solvePartOne(input: List<String>) = input.solveWithAim(aim = false)
+
+fun solvePartTwo(input: List<String>) = input.solveWithAim(aim = true)
+
+private fun List<String>.solveWithAim(aim: Boolean): Int = toCommandList()
     .fold(Point(0, 0, 0)) { point, command ->
         command(point, aim)
     }

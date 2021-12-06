@@ -1,19 +1,19 @@
-fun main() {
-    val testInput = readInput("Day04_test")
-    check(solveDay4Part1(testInput) == 4512)
-    check(solveDay4Part2(testInput) == 1924)
+package day04
 
-    val input = readInput("Day04")
-    println(solveDay4Part1(input))
-    println(solveDay4Part2(input))
+import readInput
+
+fun main() {
+    val input = readInput("day04")
+    println(solvePartTwo(input))
+    println(solvePartTwo(input))
 }
 
-private fun solveDay4Part1(input: List<String>): Int {
+fun solvePartOne(input: List<String>): Int {
     val winners = calculateBingoWinners(input)
     return winners.first().sum
 }
 
-private fun solveDay4Part2(input: List<String>): Int {
+fun solvePartTwo(input: List<String>): Int {
     val winners = calculateBingoWinners(input)
     return winners.last().sum
 }

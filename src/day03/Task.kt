@@ -1,18 +1,17 @@
+package day03
+
+import readInput
 import kotlin.math.pow
 
 fun main() {
-    val testInput = readInput("Day03_test")
-    check(testInput.solveDay3Part1() == 198)
-    check(testInput.solveDay3Part2() == 230)
-
     val input = readInput("Day03")
-    println(input.solveDay3Part1())
-    println(input.solveDay3Part2())
+    println(solvePartOne(input))
+    println(solvePartTwo(input))
 }
 
-private fun List<String>.solveDay3Part1(): Int {
-    val counterArray = IntArray(first().length) { 0 }
-    onEach { value ->
+fun solvePartOne(input: List<String>): Int {
+    val counterArray = IntArray(input.first().length) { 0 }
+    input.onEach { value ->
         value.reversed().forEachIndexed { index, char ->
             if (char == '1') {
                 counterArray[index] += 1
@@ -22,7 +21,7 @@ private fun List<String>.solveDay3Part1(): Int {
     var gamma = 0
     var epsilon = 0
     counterArray.forEachIndexed { index, count ->
-        val positive = (count * 2) > size
+        val positive = (count * 2) > input.size
         if (positive) {
             gamma += (2.0).pow(index).toInt()
         } else {
@@ -32,8 +31,8 @@ private fun List<String>.solveDay3Part1(): Int {
     return gamma * epsilon
 }
 
-private fun List<String>.solveDay3Part2(): Int {
-    val testTree = toWeightedTree()
+fun solvePartTwo(input: List<String>): Int {
+    val testTree = input.toWeightedTree()
     val scrubberRating = testTree.findSmallestNode()
     val generatorRating = testTree.findBiggestNode()
     return scrubberRating * generatorRating

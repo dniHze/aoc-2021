@@ -1,18 +1,18 @@
-fun main() {
-    val testInput = readInput("Day01_test")
-    check(solveTask1(testInput) == 8)
-    check(solveTask2(testInput) == 6)
+package day01
 
-    val input = readInput("Day01")
-    println(solveTask1(input))
-    println(solveTask2(input))
+import readInput
+
+fun main() {
+    val input = readInput("day01")
+    println(solvePartOne(input))
+    println(solvePartTwo(input))
 }
 
-fun solveTask1(input: List<String>): Int =
+fun solvePartOne(input: List<String>): Int =
     input.map { value -> value.toInt() }
         .solveIncreasingTimes()
 
-fun solveTask2(input: List<String>): Int = input.map { value -> value.toInt() }
+fun solvePartTwo(input: List<String>): Int = input.map { value -> value.toInt() }
     .windowed(size = 3, step = 1, partialWindows = false) { list ->
         list.sum()
     }

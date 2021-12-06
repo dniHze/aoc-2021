@@ -1,18 +1,18 @@
-fun main() {
-    val testInput = readInput("Day06_test")
-    check(solveDay6Part1(testInput) == 5934L)
-    check(solveDay6Part2(testInput) == 26984457539L)
+package day06
 
-    val input = readInput("Day06")
-    println(solveDay6Part1(input))
-    println(solveDay6Part2(input))
+import readInput
+
+fun main() {
+    val input = readInput("day06")
+    println(solvePartOne(input))
+    println(solvePartTwo(input))
 }
 
-private fun solveDay6Part1(input: List<String>): Long = input.createFishColony()
+fun solvePartOne(input: List<String>): Long = input.createFishColony()
     .processDays(80)
     .count()
 
-private fun solveDay6Part2(input: List<String>): Long = input.createFishColony()
+fun solvePartTwo(input: List<String>): Long = input.createFishColony()
     .processDays(256)
     .count()
 

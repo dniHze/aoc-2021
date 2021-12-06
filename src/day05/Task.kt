@@ -1,24 +1,23 @@
+package day05
+
+import readInput
 import kotlin.math.max
 import kotlin.collections.sumOf
 import kotlin.math.abs
 
 fun main() {
-    val testInput = readInput("Day05_test")
-    check(solveDay5Part1(testInput) == 5)
-    check(solveDay5Part2(testInput) == 12)
-
-    val input = readInput("Day05")
-    println(solveDay5Part1(input))
-    println(solveDay5Part2(input))
+    val input = readInput("day05")
+    println(solvePartOne(input))
+    println(solvePartTwo(input))
 }
 
-private fun solveDay5Part1(input: List<String>): Int =
+fun solvePartOne(input: List<String>): Int =
     input.toLineList()
         .filterStraightLines()
         .createLineMatrix()
         .sumAtLeast2LinesOverlap()
 
-private fun solveDay5Part2(input: List<String>): Int =
+fun solvePartTwo(input: List<String>): Int =
     input.toLineList()
         .createLineMatrix()
         .sumAtLeast2LinesOverlap()
