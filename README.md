@@ -25,6 +25,24 @@ Testing also can be done by running test task for Gradle:
 | [Day 4](https://adventofcode.com/2021/day/4) | [`day04/Task.kt`](src/day04/Task.kt) |
 | [Day 5](https://adventofcode.com/2021/day/5) | [`day05/Task.kt`](src/day05/Task.kt) |
 | [Day 6](https://adventofcode.com/2021/day/6) | [`day06/Task.kt`](src/day06/Task.kt) |
+| [Day 7](https://adventofcode.com/2021/day/7) | [`day07/Task.kt`](src/day07/Task.kt) |
+
+
+## License
+
+    Copyright 2021 Artyom Dorosh
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 [^aoc]:
     [Advent of Code][aoc] – an annual event in December since 2015.
