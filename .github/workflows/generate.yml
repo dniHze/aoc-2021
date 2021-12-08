@@ -1,0 +1,33 @@
+name: Generate template
+
+on:
+  schedule:
+    - cron: '0 6 1-25 12 *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: 'main'
+
+    - name: Generate from template
+      env:
+        SESSION_COOKIE: ${{ secrets.SESSION_COOKIE }}
+      run: ./scripts/generate-from-template.kts
+
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Generate "
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        branch: main
+        github_token: ${{ secrets.GITHUB_TOKEN }}
